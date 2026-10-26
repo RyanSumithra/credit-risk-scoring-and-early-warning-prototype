@@ -1,0 +1,55 @@
+$ python scripts/setup_project.py
+SETUP COMPLETE: requested directories, SQL placeholders, notebook shells, and module shells exist.
+Analysis status: NOT STARTED. These shells do not constitute a working analytics pipeline.
+
+exit_code=0
+
+$ python scripts/download_data.py --check-only
+{
+  "status": "BLOCKED_MISSING_OR_INVALID_DATA",
+  "files": [
+    {
+      "file": "application_train.csv",
+      "exists": false,
+      "header_valid": false
+    },
+    {
+      "file": "bureau.csv",
+      "exists": false,
+      "header_valid": false
+    },
+    {
+      "file": "bureau_balance.csv",
+      "exists": false,
+      "header_valid": false
+    },
+    {
+      "file": "previous_application.csv",
+      "exists": false,
+      "header_valid": false
+    },
+    {
+      "file": "installments_payments.csv",
+      "exists": false,
+      "header_valid": false
+    },
+    {
+      "file": "POS_CASH_balance.csv",
+      "exists": false,
+      "header_valid": false
+    },
+    {
+      "file": "credit_card_balance.csv",
+      "exists": false,
+      "header_valid": false
+    }
+  ],
+  "note": "Checks presence and required header columns only. No row counts, provenance assurance, or model metrics."
+}
+
+exit_code=2
+
+$ python scripts/download_data.py
+BLOCKED: Kaggle CLI unavailable. Follow DATA_DOWNLOAD.md, or supply --archive.
+
+exit_code=2

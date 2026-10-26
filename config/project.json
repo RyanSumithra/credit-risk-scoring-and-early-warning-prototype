@@ -1,0 +1,7 @@
+{
+  "seed": 20261026,
+  "scorecard": {"base_score": 600, "pdo": 20, "base_good_bad_odds": 50, "iv_min": 0.02, "iv_max": 1.0, "max_features": 20, "correlation_limit": 0.65, "vif_limit": 5.0},
+  "economics": {"label": "ILLUSTRATIVE ESTIMATE - ASSUMPTIONS, NOT OBSERVED INR OUTCOMES", "annual_applications": 100000, "average_loan_inr": 500000, "lgd": 0.60, "good_loan_margin": 0.08, "minimum_approval_rate": 0.60},
+  "cutoff_grid": {"start": 400, "stop": 701, "step": 5},
+  "simulation": {"label": "SIMULATED", "borrowers": 2000, "days": 180, "event_probability": 0.15, "trend_threshold": 0.25, "persistence_days": 3}
+}

@@ -1,0 +1,26 @@
+{
+  "model": "LightGBM",
+  "winning_candidate": 2,
+  "parameters": {
+    "objective": "binary",
+    "learning_rate": 0.04,
+    "colsample_bytree": 0.85,
+    "subsample": 0.85,
+    "subsample_freq": 1,
+    "random_state": 20261026,
+    "n_jobs": 4,
+    "verbosity": -1,
+    "deterministic": true,
+    "force_col_wise": true,
+    "num_leaves": 15,
+    "min_child_samples": 300,
+    "reg_lambda": 5.0,
+    "n_estimators": 500
+  },
+  "mean_cv_auc": {
+    "0": 0.7761773900789825,
+    "1": 0.7760581625558189,
+    "2": 0.776785696854565,
+    "3": 0.7757867605371859
+  }
+}

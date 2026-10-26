@@ -1,0 +1,17 @@
+{"table": "application_train", "rows": 307511, "sha256": "52e96b895b1112e1c853f670e58372719c8441c5ed1c57ac2f7fad559d784f5f", "seconds": 0.16}
+{"table": "bureau", "rows": 1716428, "sha256": "9d799143423f280720cf51c1bfbbab2a0422da8ff2763335bb30bf43155494f7", "seconds": 0.17}
+{"table": "bureau_balance", "rows": 27299925, "sha256": "33e09f06174c26f0be6b8b7398886c69e7bf0abbb29b4122f7841ffe545729a9", "seconds": 0.34}
+{"table": "previous_application", "rows": 1670214, "sha256": "5046cd657ee04df2eaa6dc8308ae86be6b3b1763674a3f63574886a2f2896505", "seconds": 0.32}
+{"table": "installments_payments", "rows": 13605401, "sha256": "428c2e2496e4d6d697ee8270e98497e5213c41be16d882eed1bc95b133726797", "seconds": 0.41}
+{"table": "POS_CASH_balance", "rows": 10001358, "sha256": "0e13bc573ffa8fc29b3f00d975e557143193a405d675b0e4694b06fbdffcb0cd", "seconds": 0.22}
+{"table": "credit_card_balance", "rows": 3840312, "sha256": "a9cdc48900d55131c90f3128b991859aeb94ca1326fb5f4d1624b9fd03782247", "seconds": 0.24}
+Executing SQL: 02_clean_and_join.sql
+Executing SQL: 03_feature_aggregation.sql
+{
+  "rows": 307511,
+  "candidate_features": 168,
+  "total_columns": 170,
+  "bad_count": 24825,
+  "bad_rate": 0.08072881945686496,
+  "unique_applicants": 307511
+}

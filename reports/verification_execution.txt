@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "partition_and_saved_metric_checks": true,
+  "bin_counts_training_only": true,
+  "reloaded_model_predictions_match_saved_scores": true,
+  "holdout_policy_recalculation": true,
+  "pdf_pages": {
+    "business_memo.pdf": 2,
+    "interview_prep.pdf": 1
+  },
+  "dashboard_screenshot_size": [
+    1500,
+    1450
+  ],
+  "executed_notebooks": 7
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MSME Credit Risk | Portfolio Lab</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#edf3f5;color:#163247;font:15px/1.5 'Segoe UI',Arial,sans-serif}
+header{background:#102e43;color:white;padding:28px 4vw 24px}header small{color:#90cbd2;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+h1{font-size:30px;line-height:1.2;margin:8px 0}header p{margin:8px 0 0;color:#c0d5df;max-width:1080px}
+main{max-width:1500px;margin:auto;padding:24px 3vw}.strip{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}.badge{background:white;border-radius:8px;padding:10px 16px;border-left:4px solid #168498}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:white;border-radius:12px;padding:20px;box-shadow:0 3px 15px #14314609}
+h2{font-size:18px;margin:0 0 8px}p.note{color:#526d7b;font-size:13px;margin:4px 0 14px}.plot{height:330px}.policy{margin-top:20px}.controls{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:18px;align-items:end;margin:18px 0}
+label{display:block;font-size:12px;color:#486474;font-weight:600}input[type=number]{width:100%;padding:8px;border:1px solid #c8d8df;border-radius:5px;font-size:15px}input[type=range]{width:100%}.value{font-size:24px;color:#147d92;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.kpi{background:#f0f7f8;padding:14px;border-radius:8px}.kpi b{display:block;font-size:25px;color:#10475b}.kpi span{font-size:12px;color:#4f6875}
+.notice{margin-top:16px;background:#fff4e5;border-left:4px solid #df9b42;padding:12px 16px;color:#795021;font-size:13px}footer{font-size:12px;color:#536c7b;padding:18px 0}a{color:#147d92}button{background:#147d92;color:white;border:0;padding:8px 12px;border-radius:5px;cursor:pointer}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}h1{font-size:25px}}
+</style><script>__PLOTLY__</script></head><body>
+<header><small>Analytics portfolio / Home Credit proxy dataset</small><h1>MSME Credit Risk &amp; Policy Lab</h1><p>Retrospective lending-risk demonstration. This is consumer lending data, not NeoGrowth or verified Indian MSME data. Validation uses an untouched stratified random holdout.</p></header>
+<main><div class="strip" id="summary"></div>
+<div class="grid"><section class="panel"><h2>Observed risk by income segment</h2><p class="note">Holdout TARGET rate; segments with at least 100 applications. Hover for volume. Small groups remain in the CSV export.</p><div id="segments" class="plot"></div></section>
+<section class="panel"><h2>Score distribution</h2><p class="note">Higher points indicate lower modeled risk. Counts are shown by observed outcome.</p><div id="distribution" class="plot"></div></section></div>
+<section class="panel policy"><h2>Cut-off simulator</h2><p class="note">The recommendation was fixed using the policy partition. Slider changes below are descriptive holdout exploration, not a new validated policy.</p>
+<div class="controls"><div><label for="cutoff">APPROVE WHEN SCORE IS AT LEAST <span id="cutoffValue" class="value"></span></label><input id="cutoff" type="range" min="400" max="700" step="1"><button id="reset">Reset fixed policy</button></div>
+<div><label for="applications">Assumed annual applications</label><input id="applications" type="number" min="1" value="100000"></div>
+<div><label for="loan">Assumed average loan (INR)</label><input id="loan" type="number" min="1" value="500000"></div>
+<div><label for="lgd">Assumed LGD (%)</label><input id="lgd" type="number" min="0" max="100" value="60"></div>
+<div><label for="margin">Assumed good-loan margin (%)</label><input id="margin" type="number" min="0" max="100" value="8"></div></div>
+<div class="kpis"><div class="kpi"><b id="approval"></b><span>Observed approval share</span></div><div class="kpi"><b id="badRate"></b><span>Accepted TARGET rate</span></div><div class="kpi"><b id="badReduction"></b><span>Relative TARGET-rate reduction</span></div><div class="kpi"><b id="goodReject"></b><span>Share of all good applicants rejected</span></div></div>
+<div class="notice" id="economics"></div><p class="note" id="counts"></p>
+</section><footer>Exact holdout cohort calculations; default economic assumptions are editable in config/project.json. Gross avoided loss subtracts rejected bad exposure; net benefit also subtracts foregone good-loan margin. No causal or deployed outcome is claimed. <a href="powerbi_holdout.csv">Download Power BI CSV</a> · <a href="../reports/LIMITATIONS.md">Limitations</a></footer></main>
+<script>
+const D=__DATA__; const el=id=>document.getElementById(id); const pct=x=>(100*x).toFixed(2)+'%';
+el('summary').innerHTML=[['Applications',D.scores.length.toLocaleString()],['Scorecard holdout AUC',D.auc.toFixed(4)],['LightGBM holdout AUC',D.boostAuc.toFixed(4)],['Score PSI vs train',D.psi.toFixed(5)],['Fixed policy threshold',D.recommended]].map(([k,v])=>`<div class="badge">${k} <strong>${v}</strong></div>`).join('');
+const layout={margin:{t:15,b:80,l:65,r:20},paper_bgcolor:'transparent',plot_bgcolor:'transparent',font:{family:'Segoe UI,Arial',color:'#24485b'},yaxis:{gridcolor:'#eaf0f3'}};
+Plotly.newPlot('segments',[{x:D.segments,y:D.segmentRate,type:'bar',marker:{color:'#168498'},customdata:D.segmentVolume,hovertemplate:'%{x}<br>TARGET rate: %{y:.2%}<br>Applications: %{customdata:,}<extra></extra>'}],{...layout,yaxis:{tickformat:'.0%',gridcolor:'#eaf0f3'}},{responsive:true,displayModeBar:false});
+Plotly.newPlot('distribution',[{x:D.centers,y:D.goods,type:'bar',name:'TARGET=0',marker:{color:'#168498'}},{x:D.centers,y:D.bads,type:'bar',name:'TARGET=1',marker:{color:'#e8a34e'}}],{...layout,barmode:'stack',margin:{t:15,b:50,l:65,r:20},xaxis:{title:{text:'Unrounded score'}},yaxis:{title:{text:'Applications'}},legend:{orientation:'h',y:1.15}},{responsive:true,displayModeBar:false});
+el('cutoff').value=D.recommended; el('applications').value=D.assumptions.annual_applications;el('loan').value=D.assumptions.average_loan_inr;el('lgd').value=100*D.assumptions.lgd;el('margin').value=100*D.assumptions.good_loan_margin;
+function update(){const c=+el('cutoff').value;let approved=0,ab=0,rb=0,rg=0,totalB=0;
+for(let i=0;i<D.scores.length;i++){let b=D.target[i];totalB+=b;if(D.scores[i]>=c){approved++;ab+=b}else{rb+=b;rg+=1-b}}
+const n=D.scores.length,rate=approved?ab/approved:null,scale=+el('applications').value/n;
+const gross=rb*scale*(+el('loan').value)*(+el('lgd').value/100)/1e7;
+const foregone=rg*scale*(+el('loan').value)*(+el('margin').value/100)/1e7;
+el('cutoffValue').textContent=c;el('approval').textContent=pct(approved/n);el('badRate').textContent=rate===null?'N/A':pct(rate);el('badReduction').textContent=rate===null?'N/A':pct(1-rate/(totalB/n));el('goodReject').textContent=pct(rg/(n-totalB));
+el('economics').textContent=`ILLUSTRATIVE ANNUAL ESTIMATE | Gross loss avoided: Rs ${gross.toFixed(2)} crore · Good-loan margin foregone: Rs ${foregone.toFixed(2)} crore · Net benefit: Rs ${(gross-foregone).toFixed(2)} crore. Based on assumed annual applications, fixed loan size, LGD and margin; these are not actual losses or realized savings.`;
+el('counts').textContent=`Accepted ${approved.toLocaleString()} of ${n.toLocaleString()} applicants; ${ab.toLocaleString()} accepted bads, ${rb.toLocaleString()} rejected bads, ${rg.toLocaleString()} rejected goods. Baseline TARGET rate: ${pct(totalB/n)}.`;
+window.dashboardState={cutoff:c,approval:approved/n,acceptedBadRate:rate,goodRejected:rg/(n-totalB),grossCrore:gross,netCrore:gross-foregone};window.dashboardReady=true;
+}
+['cutoff','applications','loan','lgd','margin'].forEach(id=>el(id).addEventListener('input',update));el('reset').onclick=()=>{el('cutoff').value=D.recommended;update()};update();
+</script></body></html>

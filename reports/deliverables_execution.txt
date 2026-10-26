@@ -1,0 +1,3 @@
+STEP 10 DASHBOARD BUILT: {"tool": "Self-contained interactive HTML / Plotly / JavaScript", "holdout_rows": 61503, "html_bytes": 6175246, "recommended_cutoff": 545.0, "segment_chart_minimum_applications": 100, "segment_chart_included_groups": 4, "segment_chart_excluded_groups": 3}
+STEP 11 COMPLETE: business memo generated from measured outputs: C:\Users\Ryan Sumithra\OneDrive\Documents\ChatGPT\MSME Credit Risk Scorecard and Early-Warning System\output\pdf\business_memo.pdf
+STEP 12 DRAFT COMPLETE: README, resume bullets and interview sheet generated; rendering and verification pending.

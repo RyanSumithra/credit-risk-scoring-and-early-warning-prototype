@@ -1,0 +1,15 @@
+{
+  "label": "SIMULATED - METHOD DEMONSTRATION, NOT REAL MERCHANT FINDINGS",
+  "borrowers": 2000,
+  "daily_rows": 360000,
+  "simulated_events": 312,
+  "true_positives": 312,
+  "false_positives": 373,
+  "false_negatives": 0,
+  "precision": 0.4554744525547445,
+  "recall": 1.0,
+  "median_lead_days": 16.0,
+  "threshold": 0.25,
+  "persistence_days": 3,
+  "outcome_definition": "Independent artificial events; real Home Credit TARGET is not used in this simulation."
+}

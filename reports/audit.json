@@ -1,0 +1,91 @@
+{
+  "rows": 307511,
+  "features": 168,
+  "bad_count": 24825,
+  "bad_rate": 0.08072881945686496,
+  "duplicates": 0,
+  "employment_sentinels_replaced": 55374,
+  "split_design": "Stratified random holdout; no chronology claim. Calibration partition carved from training pool.",
+  "splits": [
+    {
+      "split": "train",
+      "rows": 147604,
+      "bad_count": 11916,
+      "bad_rate": 0.08072951952521612
+    },
+    {
+      "split": "calibration",
+      "rows": 36902,
+      "bad_count": 2979,
+      "bad_rate": 0.08072733185193215
+    },
+    {
+      "split": "test",
+      "rows": 61502,
+      "bad_count": 4965,
+      "bad_rate": 0.08072908198107379
+    },
+    {
+      "split": "holdout",
+      "rows": 61503,
+      "bad_count": 4965,
+      "bad_rate": 0.08072776937710356
+    }
+  ],
+  "income_segments": [
+    {
+      "segment": "Working",
+      "applications": 158774,
+      "bads": 15224,
+      "bad_rate": 0.09588471664126369,
+      "feature": "NAME_INCOME_TYPE",
+      "volume_share": 0.5163197414076245,
+      "relative_risk": 1.1877383725708617
+    },
+    {
+      "segment": "Commercial associate",
+      "applications": 71617,
+      "bads": 5360,
+      "bad_rate": 0.07484256531270508,
+      "feature": "NAME_INCOME_TYPE",
+      "volume_share": 0.2328924818949566,
+      "relative_risk": 0.9270860866817826
+    },
+    {
+      "segment": "Pensioner",
+      "applications": 55362,
+      "bads": 2982,
+      "bad_rate": 0.053863660994906255,
+      "feature": "NAME_INCOME_TYPE",
+      "volume_share": 0.18003258420024,
+      "relative_risk": 0.6672172510052212
+    },
+    {
+      "segment": "State servant",
+      "applications": 21703,
+      "bads": 1249,
+      "bad_rate": 0.05754964751416855,
+      "feature": "NAME_INCOME_TYPE",
+      "volume_share": 0.07057633710664009,
+      "relative_risk": 0.7128761191028997
+    },
+    {
+      "segment": "Unemployed",
+      "applications": 22,
+      "bads": 8,
+      "bad_rate": 0.36363636363636365,
+      "feature": "NAME_INCOME_TYPE",
+      "volume_share": 7.154215621555002e-05,
+      "relative_risk": 4.50441820012817
+    },
+    {
+      "segment": "Student",
+      "applications": 18,
+      "bads": 0,
+      "bad_rate": 0.0,
+      "feature": "NAME_INCOME_TYPE",
+      "volume_share": 5.8534491449086374e-05,
+      "relative_risk": 0.0
+    }
+  ]
+}

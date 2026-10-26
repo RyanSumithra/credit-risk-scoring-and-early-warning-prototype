@@ -1,0 +1,78 @@
+{
+  "selected_using": "Calibration/policy partition only; maximize assumed net benefit subject to minimum approval",
+  "assumptions": {
+    "label": "ILLUSTRATIVE ESTIMATE - ASSUMPTIONS, NOT OBSERVED INR OUTCOMES",
+    "annual_applications": 100000,
+    "average_loan_inr": 500000,
+    "lgd": 0.6,
+    "good_loan_margin": 0.08,
+    "minimum_approval_rate": 0.6
+  },
+  "selected_cutoff": 545.0,
+  "evaluation": {
+    "train": {
+      "cutoff": 545.0,
+      "applications": 147604,
+      "accepted": 116907,
+      "accepted_bads": 5646,
+      "rejected_bads": 6270,
+      "rejected_goods": 24427,
+      "approval_rate": 0.7920313812633804,
+      "baseline_bad_rate": 0.08072951952521612,
+      "accepted_bad_rate": 0.0482947984295209,
+      "relative_bad_rate_reduction": 0.40177027296148016,
+      "good_customers_rejected_share": 0.1800232887211839,
+      "estimated_annual_gross_loss_avoided_crore": 127.43557085173843,
+      "estimated_annual_good_margin_foregone_crore": 66.19603804774938,
+      "estimated_annual_net_benefit_crore": 61.23953280398904
+    },
+    "calibration": {
+      "cutoff": 545.0,
+      "applications": 36902,
+      "accepted": 29332,
+      "accepted_bads": 1441,
+      "rejected_bads": 1538,
+      "rejected_goods": 6032,
+      "approval_rate": 0.7948620670966343,
+      "baseline_bad_rate": 0.08072733185193215,
+      "accepted_bad_rate": 0.049127233056048,
+      "relative_bad_rate_reduction": 0.391442378571909,
+      "good_customers_rejected_share": 0.1778144621643133,
+      "estimated_annual_gross_loss_avoided_crore": 125.03387350279117,
+      "estimated_annual_good_margin_foregone_crore": 65.38399002764078,
+      "estimated_annual_net_benefit_crore": 59.64988347515038
+    },
+    "test": {
+      "cutoff": 545.0,
+      "applications": 61502,
+      "accepted": 48758,
+      "accepted_bads": 2314,
+      "rejected_bads": 2651,
+      "rejected_goods": 10093,
+      "approval_rate": 0.7927872264316608,
+      "baseline_bad_rate": 0.08072908198107379,
+      "accepted_bad_rate": 0.04745887854300833,
+      "relative_bad_rate_reduction": 0.41212166200360556,
+      "good_customers_rejected_share": 0.1785202610679732,
+      "estimated_annual_gross_loss_avoided_crore": 129.31286787421547,
+      "estimated_annual_good_margin_foregone_crore": 65.64339371077364,
+      "estimated_annual_net_benefit_crore": 63.669474163441826
+    },
+    "holdout": {
+      "cutoff": 545.0,
+      "applications": 61503,
+      "accepted": 48733,
+      "accepted_bads": 2416,
+      "rejected_bads": 2549,
+      "rejected_goods": 10221,
+      "approval_rate": 0.7923678519747004,
+      "baseline_bad_rate": 0.08072776937710356,
+      "accepted_bad_rate": 0.04957626249153551,
+      "relative_bad_rate_reduction": 0.3858834094628584,
+      "good_customers_rejected_share": 0.18078106760055185,
+      "estimated_annual_gross_loss_avoided_crore": 124.33539827325494,
+      "estimated_annual_good_margin_foregone_crore": 66.47480610701918,
+      "estimated_annual_net_benefit_crore": 57.86059216623577
+    }
+  }
+}

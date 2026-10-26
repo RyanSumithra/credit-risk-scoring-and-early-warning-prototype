@@ -1,0 +1,48 @@
+{
+  "status": "HEADERS_READY_FOR_FULL_AUDIT",
+  "files": [
+    {
+      "file": "application_train.csv",
+      "exists": true,
+      "header_valid": true,
+      "bytes": 166133370
+    },
+    {
+      "file": "bureau.csv",
+      "exists": true,
+      "header_valid": true,
+      "bytes": 170016717
+    },
+    {
+      "file": "bureau_balance.csv",
+      "exists": true,
+      "header_valid": true,
+      "bytes": 375592889
+    },
+    {
+      "file": "previous_application.csv",
+      "exists": true,
+      "header_valid": true,
+      "bytes": 404973293
+    },
+    {
+      "file": "installments_payments.csv",
+      "exists": true,
+      "header_valid": true,
+      "bytes": 723118349
+    },
+    {
+      "file": "POS_CASH_balance.csv",
+      "exists": true,
+      "header_valid": true,
+      "bytes": 392703158
+    },
+    {
+      "file": "credit_card_balance.csv",
+      "exists": true,
+      "header_valid": true,
+      "bytes": 424582605
+    }
+  ],
+  "note": "Checks presence and required header columns only. No row counts, provenance assurance, or model metrics."
+}

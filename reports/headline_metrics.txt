@@ -1,0 +1,114 @@
+{
+  "dataset": {
+    "rows": 307511,
+    "candidate_features": 168,
+    "total_columns": 170,
+    "bad_count": 24825,
+    "bad_rate": 0.08072881945686496,
+    "unique_applicants": 307511
+  },
+  "holdout_scorecard": {
+    "rows": 61503,
+    "bad_count": 4965,
+    "bad_rate": 0.08072776937710356,
+    "auc": 0.7519393350111434,
+    "gini": 0.5038786700222868,
+    "ks": 0.3763505955249305,
+    "brier": 0.06856105203795115,
+    "log_loss": 0.24862982188570332,
+    "mean_predicted_pd": 0.0807363715660299
+  },
+  "holdout_lightgbm": {
+    "rows": 61503,
+    "bad_count": 4965,
+    "bad_rate": 0.08072776937710356,
+    "auc": 0.7813176119781768,
+    "gini": 0.5626352239563537,
+    "ks": 0.42809055300506926,
+    "brier": 0.06652616521228427,
+    "log_loss": 0.23949185356168762,
+    "mean_predicted_pd": 0.08059480598534971
+  },
+  "holdout_scorecard_psi": {
+    "psi": 0.00016242840893746752,
+    "interpretation": "stable",
+    "reference_rows": 147604,
+    "current_rows": 61503,
+    "reference_bin_edges": [
+      531.1153529850627,
+      544.1147007515456,
+      553.7165292781029,
+      561.8172155797351,
+      569.2172326255679,
+      576.4970382156771,
+      584.2419940052188,
+      592.9751198913239,
+      604.5177669991122
+    ],
+    "reference_share": [
+      0.10000372604744275,
+      0.09999695141572866,
+      0.09999695141572866,
+      0.10000372604744275,
+      0.09999695141572866,
+      0.09999695141572866,
+      0.10000372604744275,
+      0.09999695141572866,
+      0.09999695141572866,
+      0.10000372604744275,
+      3.3873158570417214e-06
+    ],
+    "current_share": [
+      0.09913264020419942,
+      0.10015688888527602,
+      0.10140874838436964,
+      0.09996179389840429,
+      0.09853109732801157,
+      0.0994903143467976,
+      0.10285570287033499,
+      0.10057959469016478,
+      0.09887251355503711,
+      0.09900257687961826,
+      8.128957786322215e-06
+    ]
+  },
+  "holdout_fixed_policy": {
+    "cutoff": 545.0,
+    "applications": 61503,
+    "accepted": 48733,
+    "accepted_bads": 2416,
+    "rejected_bads": 2549,
+    "rejected_goods": 10221,
+    "approval_rate": 0.7923678519747004,
+    "baseline_bad_rate": 0.08072776937710356,
+    "accepted_bad_rate": 0.04957626249153551,
+    "relative_bad_rate_reduction": 0.3858834094628584,
+    "good_customers_rejected_share": 0.18078106760055185,
+    "estimated_annual_gross_loss_avoided_crore": 124.33539827325494,
+    "estimated_annual_good_margin_foregone_crore": 66.47480610701918,
+    "estimated_annual_net_benefit_crore": 57.86059216623577
+  },
+  "economic_assumptions": {
+    "label": "ILLUSTRATIVE ESTIMATE - ASSUMPTIONS, NOT OBSERVED INR OUTCOMES",
+    "annual_applications": 100000,
+    "average_loan_inr": 500000,
+    "lgd": 0.6,
+    "good_loan_margin": 0.08,
+    "minimum_approval_rate": 0.6
+  },
+  "SIMULATED_early_warning": {
+    "label": "SIMULATED - METHOD DEMONSTRATION, NOT REAL MERCHANT FINDINGS",
+    "borrowers": 2000,
+    "daily_rows": 360000,
+    "simulated_events": 312,
+    "true_positives": 312,
+    "false_positives": 373,
+    "false_negatives": 0,
+    "precision": 0.4554744525547445,
+    "recall": 1.0,
+    "median_lead_days": 16.0,
+    "threshold": 0.25,
+    "persistence_days": 3,
+    "outcome_definition": "Independent artificial events; real Home Credit TARGET is not used in this simulation."
+  }
+}

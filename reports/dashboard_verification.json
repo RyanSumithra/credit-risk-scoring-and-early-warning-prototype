@@ -1,0 +1,27 @@
+{
+  "initial": {
+    "cutoff": 545,
+    "approval": 0.7923678519747004,
+    "acceptedBadRate": 0.04957626249153551,
+    "goodRejected": 0.18078106760055185,
+    "grossCrore": 124.33539827325494,
+    "netCrore": 57.86059216623576
+  },
+  "changed": {
+    "cutoff": 600,
+    "approval": 0.13300164219631563,
+    "acceptedBadRate": 0.014425427872860636,
+    "goodRejected": 0.8574056386854859,
+    "grossCrore": 236.42749134188577,
+    "netCrore": -78.84818626733656
+  },
+  "reset": {
+    "cutoff": 545,
+    "approval": 0.7923678519747004,
+    "acceptedBadRate": 0.04957626249153551,
+    "goodRejected": 0.18078106760055185,
+    "grossCrore": 124.33539827325494,
+    "netCrore": 57.86059216623576
+  },
+  "plots": 2
+}

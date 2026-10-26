@@ -1,0 +1,237 @@
+[
+  {
+    "feature": "DAYS_BIRTH",
+    "reason": "correlation",
+    "max_abs_correlation": 0.9999548728762411
+  },
+  {
+    "feature": "bureau_oldest_credit_day",
+    "reason": "correlation",
+    "max_abs_correlation": 0.8849146096264328
+  },
+  {
+    "feature": "NAME_INCOME_TYPE",
+    "reason": "correlation",
+    "max_abs_correlation": 0.6707670181870645
+  },
+  {
+    "feature": "DAYS_LAST_PHONE_CHANGE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "REGION_RATING_CLIENT",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "installment_avg_days_late",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "card_max_utilization",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "FLOORSMAX_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "FLOORSMAX_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "FLOORSMAX_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "bureau_debt_sum",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "DAYS_ID_PUBLISH",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "credit_annuity_ratio",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "TOTALAREA_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "LIVINGAREA_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "LIVINGAREA_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "installment_max_days_late",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "ELEVATORS_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "FLAG_EMP_PHONE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "LIVINGAREA_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "APARTMENTS_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "FLAG_DOCUMENT_3",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "APARTMENTS_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "APARTMENTS_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "ELEVATORS_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "YEARS_BEGINEXPLUATATION_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "YEARS_BEGINEXPLUATATION_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "YEARS_BEGINEXPLUATATION_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "ELEVATORS_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "REGION_POPULATION_RELATIVE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "REG_CITY_NOT_WORK_CITY",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "pos_month_count",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "ENTRANCES_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "ENTRANCES_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "AMT_CREDIT",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "ENTRANCES_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "DAYS_REGISTRATION",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "pos_loan_count",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "WALLSMATERIAL_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "card_payment_min_ratio",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "BASEMENTAREA_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "BASEMENTAREA_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "EMERGENCYSTATE_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "NONLIVINGAREA_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "NONLIVINGAREA_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "BASEMENTAREA_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "NONLIVINGAREA_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "HOUSETYPE_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "OWN_CAR_AGE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "REG_CITY_NOT_LIVE_CITY",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "NAME_FAMILY_STATUS",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "FLOORSMIN_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "LIVINGAPARTMENTS_AVG",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "FLOORSMIN_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "LIVINGAPARTMENTS_MEDI",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "previous_avg_annuity",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "FLOORSMIN_MODE",
+    "reason": "maximum feature count"
+  },
+  {
+    "feature": "LIVINGAPARTMENTS_MODE",
+    "reason": "maximum feature count"
+  }
+]
